@@ -1,0 +1,16 @@
+new folder
+python -m venv env
+.\env\Scripts\activate
+pip install django==4.0
+django-admin startproject searchdjango . 
+pip freeze > requirements.txt
+python manage.py migrate
+python manage.py runserver
+python manage.py startapp core
+python manage.py makemigrations
+new folder templates(index.html,details/navbar.html)
+core/views.py create path home
+searchdjango/settings.py / installed_apps +"core"
+searchdjango/templates/'dirs' + BASE_DIR/ "templates"
+searchdjango/urls.py/urlpatterns + path('', include("core.urls")
+python manage.py createsuperuser   (admin 1234)
